@@ -11,7 +11,8 @@ class Home extends Component {
     posts: [],
     allPosts: [],
     page: 0,
-    postsPerPage: 2
+    postsPerPage: 3,
+    searchValue: ''
     
   };
 
@@ -42,17 +43,42 @@ class Home extends Component {
 
     this.setState({ posts, page: nextPage });
   }
+  handleChange = (e) =>{
+    const { value } = e.target;
+    this.setState({ searchValue: value });
+
+  }
 
   render() {
-    const { posts } = this.state;
+    const { posts, page, postsPerPage, allPosts, searchValue } = this.state;
+    const noMorePosts = page + postsPerPage >= allPosts.length;
+
+    
 
     return (
       <section className='container'>
-        <Posts posts={posts} />
-        <Button 
-          text="Load more posts"
-          onClick= {this.loadMorePosts} 
+        {!!searchValue && (
+          <h1>SerachValue: {searchValue}</h1>
+        )}
+
+        <input 
+          type="search" 
+          value={searchValue}
+          onChange={this.handleChange}
           />
+          <br /><br /><br />
+
+        <Posts posts={posts} />
+        <div className='button-container'>
+          {!searchValue && (
+            <Button 
+              text="Load more posts"
+              onClick= {this.loadMorePosts} 
+              disabled ={noMorePosts}
+              />
+          )}
+
+        </div>
       </section>
     );
   }

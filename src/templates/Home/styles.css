@@ -6,6 +6,12 @@
   padding: 30px;
 }
 
+.button-container{
+  min-height: 80px;
+  display: flex;
+  align-items: flex-end;
+}
+
 
 
 
