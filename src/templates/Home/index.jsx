@@ -5,6 +5,7 @@ import { Component } from 'react';
 import { loadPosts } from '../../utils/load-post';
 import { Posts } from '../../components/Posts';
 import { Button } from '../../components/Button';
+import { TextInput } from '../../components/TextInput';
 
 class Home extends Component {
   state = {
@@ -13,21 +14,21 @@ class Home extends Component {
     page: 0,
     postsPerPage: 3,
     searchValue: ''
-    
+
   };
 
   async componentDidMount() {
     await this.loadPosts();
   }
-  
+
   loadPosts = async () => {
     const { page, postsPerPage } = this.state;
 
     const postsAndPhotos = await loadPosts();
-    this.setState({ 
+    this.setState({
       posts: postsAndPhotos.slice(page, postsPerPage),
       allPosts: postsAndPhotos,
-     })
+    })
   }
 
   loadMorePosts = () => {
@@ -44,7 +45,7 @@ class Home extends Component {
 
     this.setState({ posts, page: nextPage });
   }
-  handleChange = (e) =>{
+  handleChange = (e) => {
     const { value } = e.target;
     this.setState({ searchValue: value });
 
@@ -62,34 +63,28 @@ class Home extends Component {
 
     return (
       <section className='container'>
-        {!!searchValue && (
-          <>
+        <div className="search-container">
+          {!!searchValue && (
             <h1>SerachValue: {searchValue}</h1>
-            <br />
-          </>
-        )}
-        <input 
-          type="search" 
-          value={searchValue}
-          onChange={this.handleChange}
-          />
-          <br /><br /><br />
-
-          {filteredPosts.length > 0 && (
-            <Posts posts={filteredPosts} />
-            )}
-
-          {filteredPosts.length === 0 && (
-            <p>Não existem posts =(</p>
           )}
+
+          <TextInput searchValue={searchValue} handleChange={this.handleChange} />
+        </div>
+        {filteredPosts.length > 0 && (
+          <Posts posts={filteredPosts} />
+        )}
+
+        {filteredPosts.length === 0 && (
+          <p>Não existem posts =(</p>
+        )}
 
         <div className='button-container'>
           {!searchValue && (
-            <Button 
+            <Button
               text="Load more posts"
-              onClick= {this.loadMorePosts} 
-              disabled ={noMorePosts}
-              />
+              onClick={this.loadMorePosts}
+              disabled={noMorePosts}
+            />
           )}
 
 
@@ -97,7 +92,7 @@ class Home extends Component {
       </section>
     );
   }
-  
+
 }
 export default Home;
 
