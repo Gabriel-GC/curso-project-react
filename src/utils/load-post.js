@@ -9,7 +9,8 @@ export const loadPosts = async () => {
     const photosJson = await photos.json();
 
     const postsAndPhotos = postsJson.map((post, index) => {
-      return { ...post, cover: photosJson[index].url }
+      return { ...post, cover: photosJson[index].url="https://i.imgur.com/WELZUCr.jpg" }
+      //remover o set de url para buscar img do banco
     });
 
     return postsAndPhotos;

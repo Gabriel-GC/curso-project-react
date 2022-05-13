@@ -1,11 +1,15 @@
 import './styles.css';
 
+import NotFound from "../../assets/Icons/browser.png";
+
 import { Component } from 'react';
 
 import { loadPosts } from '../../utils/load-post';
 import { Posts } from '../../components/Posts';
 import { Button } from '../../components/Button';
 import { TextInput } from '../../components/TextInput';
+import { Title } from '../../components/Title';
+import { Paragraph } from '../../components/Paragraph';
 
 class Home extends Component {
   state = {
@@ -63,9 +67,11 @@ class Home extends Component {
 
     return (
       <section className='container'>
-        <div className="search-container">
+        <Title />
+        <Paragraph />
+        <div className='search-container'>
           {!!searchValue && (
-            <h1>SerachValue: {searchValue}</h1>
+            <h2>Searching post: {searchValue}</h2>
           )}
 
           <TextInput searchValue={searchValue} handleChange={this.handleChange} />
@@ -75,7 +81,12 @@ class Home extends Component {
         )}
 
         {filteredPosts.length === 0 && (
-          <p>Não existem posts =(</p>
+          <>
+            <div className="notfound-container">
+              <img src={NotFound} alt="notfound" />
+              <p className='notfound'>There are no posts, try again =(</p>
+            </div>
+          </>
         )}
 
         <div className='button-container'>
@@ -86,8 +97,6 @@ class Home extends Component {
               disabled={noMorePosts}
             />
           )}
-
-
         </div>
       </section>
     );
