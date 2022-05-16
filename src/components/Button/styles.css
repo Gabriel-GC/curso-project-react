@@ -1,13 +1,28 @@
+.button-container{
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+
 .button{
     width: 100%;
-    background: darkblue;
-    color: whitesmoke;
+    background: linear-gradient(to right, #a033ff , #4f197e);
+    color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 20px 30px;
     cursor: pointer;
+    border-radius: 20px;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.button:hover{
+    background: linear-gradient(to right, #a547f8 , #481772);
 }
 
 .button:disabled{
-    background: #888;
+    background: rgb(136, 136, 136, 0.5);
+    color: rgb(138, 138, 138);
     cursor: not-allowed;
 }

@@ -4,11 +4,11 @@ import { Component } from "react";
 
 export class Button extends Component {
     render() {
-        const {text, onClick, disabled} = this.props;
+        const { text, onClick, disabled } = this.props;
 
-        return(
+        return (
             <button
-                disabled = {disabled}
+                disabled={disabled}
                 className="button"
                 onClick={onClick}
             >

@@ -4,7 +4,7 @@ export const Paragraph = () => {
     return (
         <div className="content">
             <div className='text'>    
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra sapien vitae tortor vestibulum porttitor ut ultrices dui. Curabitur a mi id neque maximus tempor et eu lectus. Maecenas sem diam, iaculis et aliquam id, porttitor vitae orci.</span>
+                <span>This is a site created as an example of my portfolio, however, fully usable for our future projects, enjoy the added features and contact me, of couse!</span>
             </div>
         </div>
 
