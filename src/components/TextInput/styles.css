@@ -1,5 +1,23 @@
-.text-input{
+.text-input {
     width: 100%;
-    font-size: 30px;
-    padding: 5px 10px;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    background: linear-gradient(to right, #a033ff , #4f197e);
+    color: white;
+}
+
+::placeholder{
+    color: white;
+}
+
+input:focus {
+    outline:none;
+    border: 2px solid rgb(255, 255, 255, 0.8);
+
+}
+input::-webkit-search-cancel-button{
+    filter: brightness(100);
 }

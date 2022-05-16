@@ -84,7 +84,7 @@ class Home extends Component {
           <>
             <div className="notfound-container">
               <img src={NotFound} alt="notfound" />
-              <p className='notfound'>There are no posts, try again =(</p>
+              <p className='notfound'>There are no posts, try again.</p>
             </div>
           </>
         )}

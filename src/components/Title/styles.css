@@ -1,7 +1,7 @@
 .title{
     width: 100%;
     display: flex;
-    padding: 7rem 0 10rem;
+    padding: 2rem 0 6rem;
     justify-content: center;
     text-align: center;
 }
@@ -11,7 +11,7 @@
     font-size: 52px;
     font-weight: bold;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -31,7 +31,6 @@
     border: 10px solid white;
     border-radius: 30px;
     transform: translateX(-50%) translateY(-50%) rotate(0deg);
-    animation: 10s infinite alternate ease-in-out tipsy;
   }
   
   h1:before {
@@ -44,11 +43,3 @@
     box-shadow: 0 0 10px #9344bd, 0 0 40px #9344bd, 0 0 80px #9344bd;
   }
 
-  @keyframes tipsy {
-    0% {
-      transform: translateX(-50%) translateY(-50%) rotate(0deg);
-    }
-    100% {
-      transform: translateX(-50%) translateY(-50%) rotate(360deg);
-    }
-  }
