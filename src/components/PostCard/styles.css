@@ -29,9 +29,9 @@ h3::first-letter{
 }
 
 .line{
+  width: 100%;
   margin-bottom: 15px;
   opacity: 0.3;
-  
 }
 
 .post p{
@@ -45,7 +45,6 @@ h3::first-letter{
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-
 }
 
 p::first-letter{
@@ -53,6 +52,24 @@ p::first-letter{
 }
 
 .post-content{
-  padding: 25px 0 20px 0;
+  padding: 25px 10px;
   margin: 0 10px;
+}
+
+.number{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.post span{
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(to right, #a033ff , #4f197e);
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
 }
