@@ -7,9 +7,9 @@
 
 .button{
     width: 100%;
-    background: linear-gradient(to right, #a033ff , #4f197e);
+    background: linear-gradient(to right, #303030 , #000);
     color: white;
-    border: none;
+    border: 1px solid;
     padding: 20px 30px;
     cursor: pointer;
     border-radius: 20px;
@@ -18,7 +18,7 @@
 }
 
 .button:hover{
-    background: linear-gradient(to right, #a547f8 , #481772);
+    background: #303030;
 }
 
 .button:disabled{
