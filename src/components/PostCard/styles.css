@@ -64,7 +64,7 @@ p::first-letter{
 }
 .post span{
   font-family: 'Raleway', sans-serif;
-  background: linear-gradient(to right, #a033ff , #4f197e);
+  background: linear-gradient(to right, #303030 , #000);
   color: white;
   width: 35px;
   height: 35px;
