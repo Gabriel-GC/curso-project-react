@@ -4,7 +4,6 @@
     padding: 15px;
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-
     background: linear-gradient(to right, #303030 , #000);
     color: white;
 }
@@ -16,7 +15,7 @@
 input:focus {
     outline:none;
     border: 2px solid rgb(255, 255, 255, 0.8);
-
+    background: #303030;
 }
 input::-webkit-search-cancel-button{
     filter: brightness(100);
