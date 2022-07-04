@@ -13,3 +13,10 @@ p {
   font-size: 24px;
   padding: 0 15px;
 }
+
+@media only screen and (max-width: 789px){
+  p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}

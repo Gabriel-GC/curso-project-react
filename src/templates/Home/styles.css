@@ -33,6 +33,18 @@
   font-size: 32px;
 }
 
+@media only screen and (max-width: 789px){
+
+  .container{
+    padding: 40px 10px;
+  }
+
+.search-container h2{
+    font-size: 24px;
+  }
+
+}
+
 
 
 

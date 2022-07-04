@@ -34,4 +34,10 @@
   }
   
 
+@media only screen and (max-width: 789px){
+  h1{
+    font-size: 32px;
+  }
+}
+
 
